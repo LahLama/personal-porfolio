@@ -1,0 +1,78 @@
+let imagesCycle = [
+
+    {
+        id: 0,
+        link: "/ASSETS/IMAGES/games/gameJams/fishRescue.png",
+        name: "Fish Rescue Game Jam",
+    },
+    {
+        id: 1,
+        link: "/ASSETS/IMAGES/games/prototypes/colourSwitch.png",
+        name: "Colour Switch Prototype",
+    },
+    {
+        id: 2,
+        link: "/ASSETS/IMAGES/games/prototypes/braaiSimulator.png",
+        name: "Braai Simulator Prototype",
+    },
+    {
+        id: 3,
+        link: "/ASSETS/IMAGES/projects/coded/morabaraba.png",
+        name: "Morabaraba Project",
+    },
+    {
+        id: 4,
+        link: "/ASSETS/IMAGES/projects/coded/1024.png",
+        name: "1024 Project",
+    },
+    {
+        id: 5,
+        link: "/ASSETS/IMAGES/projects/practical/intergratedSystem.jpg",
+        name: "3 Way Intergrated System",
+    },
+    {
+        id: 6,
+        link: "/ASSETS/IMAGES/projects/practical/keypadSystem.jpg",
+        name: "Key Pad System",
+    },   
+]
+
+heroImage = document.querySelector("#heroImageBack");
+
+
+let cycleIndex = 0;
+let cycleInterval;
+
+function setHeroImage(index) {
+
+    const next = document.querySelector("#heroImage");
+    next.style.backgroundImage = `url(${imagesCycle[index].link})`;
+    next.style.opacity = "1";
+
+    setTimeout(() => {
+        heroImage.style.backgroundImage = `url(${imagesCycle[index].link})`;
+        next.style.opacity = "0";
+    }, 3000);
+}
+
+
+function nextImage() {
+    cycleIndex = (cycleIndex + 1) % imagesCycle.length;
+    setHeroImage(cycleIndex);
+}
+
+function prevImage() {
+    cycleIndex = (cycleIndex - 1 + imagesCycle.length) % imagesCycle.length;
+    setHeroImage(cycleIndex);
+}
+
+function startCycle(intervalMs = 5000) {
+    cycleInterval = setInterval(nextImage, intervalMs);
+}
+
+function stopCycle() {
+    clearInterval(cycleInterval);
+}
+
+setHeroImage(cycleIndex);
+startCycle();

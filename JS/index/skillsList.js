@@ -31,6 +31,10 @@ skills = [
     {
         name: "Krita",
         comfortability: 4
+    },
+    {
+        name: "Figma",
+        comfortability: 3
     }
 ]
 

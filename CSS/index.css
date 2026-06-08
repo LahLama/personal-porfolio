@@ -2,13 +2,22 @@ h2 {
     color: var(--mainTwo);
 }
 
-/* Hero */
 #heroContainer {
-    background-image: url("../ASSETS/IMAGES/test1.png");
+    position: relative;
+    height: 512px;
+}
+
+#heroImageBack, #heroImage {
+    position: absolute;
+    inset: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 512px;
+}
+
+#heroImage {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 /* About Me */
@@ -91,8 +100,8 @@ h2 {
 
 /* FAQ */
 #FAQandImage {
-    display: grid;
-    grid-template-columns: 70% 30%;
+        display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .faq_q {

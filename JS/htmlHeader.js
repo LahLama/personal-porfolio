@@ -125,33 +125,32 @@ function checkWindowSize(windowSize) {
       
         var icon = element.querySelector('img')
         if (icon)
-            icon.classList.toggle("hidden")
+            icon.classList.remove("hidden")
          var name = element.querySelector('p')
         if (name)
-            name.classList.toggle("hidden");
+            name.classList.add("hidden");
         
         
      });
-     return true
+     
     } 
   else 
     {
 
       document.querySelectorAll(".linkRef").forEach(element => {
         
-      
         var icon = element.querySelector('img')
         if (icon)
-            icon.classList.toggle("hidden")
+            icon.classList.add("hidden")
          var name = element.querySelector('p')
         if (name)
-            name.classList.toggle("hidden");
+            name.classList.remove("hidden");
         
         
      });
-     return false
+     
     }
-    return false
+    
 }
 
 

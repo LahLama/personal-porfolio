@@ -20,9 +20,11 @@
     <!-- Scripts -->
     <script src="/JS/index/skillsList.js" defer></script>
     <script src="/JS/index/testimonialsCarousel.js" defer></script>
+    <script src="/JS/index/heroCarousel.js" defer></script>
     <script src="/JS/index/faq.js" defer></script>
     <script src="/JS/htmlHeader.js" defer></script>
     <script src="/JS/htmlFooter.js" defer></script>
+    
     <!--  -->
 
     <base href="/"> <!-- This should help with pathing, with default being where index.html is-->
@@ -35,7 +37,10 @@
 
     <main>
         <section id="heroContainer" class="classContainer">
-            <!-- <img src="../ASSETS/IMAGES/test1.png" id="heroImage" alt="Hero section image showing multiple projects on rotation" width="100%" height="512"> -->
+
+            <div id="heroImageBack"></div>
+            <div id="heroImage"></div>
+
             <div id="imageSelect"></div>
         </section>
 
@@ -44,8 +49,7 @@
                 <h2>About Me</h2>
                 <img src="/ASSETS/IMAGES/about/james.jpg" id="aboutMeImg" alt="Image of James Ihlenfeldt" >
                 <p id="aboutMeDesc">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis rerum illo unde ducimus voluptas numquam, reprehenderit pariatur perferendis dolore ut eligendi quisquam saepe neque, maiores soluta cumque? Voluptatum, illo quod?
-                </p>           
+                   I am currently working on getting my BEng Sc in Digital Arts Degree from Wits University. I'm looking to collaborate on games primarily unity games. I am currently learning web development (CSS,JS,HTML) <br> Fun fact : Even though I am also known as LahLama, I don't like LLamas 😂                </p>           
             </div>
             
             <div id="skills" class="classContainer">
@@ -84,39 +88,36 @@
                 <button id="" class="pressButton faq_question forwardButton">
                     <img src="/ASSETS/IMAGES/prefabs/button_60x40.png" alt="" />
                 </button>
-                <h2>Question 1</h2>
-                <div class="faq_answer hidden"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                <h2>How did I make my first game?</h2>
+                <div class="faq_answer hidden"> With Godot! Godot was in thier starting phase and my laptop at that time couldn't handle unity so I tried making a South African Loadshedding game! </div>
             </div>
 
             <div id="q2"  class="faq_q">
                 <button id="" class="pressButton faq_question forwardButton">
                     <img src="/ASSETS/IMAGES/prefabs/button_60x40.png" alt="" />
                 </button>
-                <h2>Question 2</h2>
-                <div class="faq_answer hidden"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                <h2>What are my Top Games?</h2>
+                <div class="faq_answer hidden"> Currently, in no particular order ... Minecraft, Marvel Rivals, Skyrim, Kingdom Hearts 2 and Lego Batman The Videogame. </div>
             </div>
 
             <div id="q3"  class="faq_q">
                 <button id="" class="pressButton faq_question forwardButton">
                     <img src="/ASSETS/IMAGES/prefabs/button_60x40.png" alt="" />
                 </button>
-                <h2>Question 3</h2>
-                <div class="faq_answer hidden"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                <h2>What type of games do I try to make?</h2>
+                <div class="faq_answer hidden"> Most times without any specific genre, I try to make games with a central theme being South Africa. As a South African, I have first hand knowledge about how diverse, amazing and breathtaking this country truly is, and I will try and relay that through my games </div>
             </div>
 
             <div id="q4"  class="faq_q">
                 <button id="" class="pressButton faq_question forwardButton">
                     <img src="/ASSETS/IMAGES/prefabs/button_60x40.png" alt="" />
                 </button>
-                <h2>Question 4</h2>
-                <div class="faq_answer hidden"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                <h2>Where can I be found?</h2>
+                <div class="faq_answer hidden"> Head over to the contacts page to see all my socials and some of my latest posts </div>
             </div>
 
         </div>
-        <img src="/ASSETS/IMAGES/prefabs/" alt="">
-            <div  class="classContainer whitespaceImage">
-                <!-- <img src="./ASSETS/IMAGES/test1.png" height="256" width="256" alt=""> -->
-            </div>
+        <div  class="classContainer whitespaceImage"></div>
         </section>
 
      
