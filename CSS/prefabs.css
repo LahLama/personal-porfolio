@@ -194,6 +194,10 @@ footer {
         font-size: 15px;
     }
 
+    .linkRef.active{
+
+        filter: invert();
+    }
 
    body {
         display: flex;
