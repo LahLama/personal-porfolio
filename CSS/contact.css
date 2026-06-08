@@ -85,3 +85,16 @@ img
     grid-row: 2;
     margin: 0;
 }
+
+@media screen and (min-width: 0px) and (max-width: 300px)
+
+{
+    img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .mediaPage {
+    display: block;
+}
+}
