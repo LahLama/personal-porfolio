@@ -2,29 +2,37 @@ pages = [
         {
         name : "games",
         link: "../HTML/games.html",
-        position: "left"
+        position: "left",
+        // https://www.svgrepo.com/svg/447384/games
+        icon : "/ASSETS/IMAGES/prefabs/games.svg"
     },
     {
         name: "projects",
         link: "../HTML/projects.html",
-        position: "left"
+        position: "left",
+        // https://www.svgrepo.com/svg/247371/documents-document
+        icon:"/ASSETS/IMAGES/prefabs/projects.svg"
     },
     {
         name: "James Ihlenfeldt",
         link: "../index.html",
-        position: "main"
+        position: "main",
+        icon :"/ASSETS/IMAGES/prefabs/JI.svg"
     },
     {
         name: "reviews",
         link: "../HTML/reviews.html",
-        position: "right"
+        position: "right",
+        // https://www.svgrepo.com/svg/455657/star-comment-rating
+        icon: "/ASSETS/IMAGES/prefabs/ratings.svg"
     },
 
     {
         name : "contact",
         link: "../HTML/contact.html",
-        position: "right"
-        
+        position: "right",
+        // https://www.svgrepo.com/svg/456668/contact-mobile
+        icon:"/ASSETS/IMAGES/prefabs/contact.svg"
     },
 ]
 const header = document.querySelector("header");
@@ -35,11 +43,38 @@ navLeft.className = "navLeft";
 const navRight = document.createElement("div");
 navRight.className = "navRight";
 
+// Create a MediaQueryList object
+var windowSize = window.matchMedia("(max-width: 768px)")
+
+// Attach listener function on state changes
+windowSize.addEventListener("change", function() {
+  checkWindowSize(windowSize);
+});
+
+
 
 function renderBar(page) {
     const newLink = document.createElement("a");
     newLink.setAttribute("href", page.link);
-    newLink.textContent = page.name.toUpperCase();
+
+    const linkName = document.createElement("p");
+    linkName.classList.add("linkName");
+    linkName.classList.add("hidden")
+    linkName.classList.toggle("hidden")
+    linkName.textContent = page.name.toUpperCase();
+    newLink.append(linkName);
+
+    const newLinkIcon = document.createElement("img");
+    newLinkIcon.setAttribute("src", page.icon);
+    newLinkIcon.setAttribute("alt", "icon image for " + page.name);
+    newLink.classList.add("linkRef")
+    
+    newLinkIcon.classList.add("linkIconImage");
+    newLinkIcon.classList.add("hidden")
+    newLink.append(newLinkIcon);
+
+    newLink.classList.add("center")
+
     if (page.position === "main") newLink.setAttribute("id", "mainTitle");
     return newLink;
 }
@@ -63,7 +98,7 @@ const currentPage = window.location.pathname.split('/').pop();
 console.log(currentPage);
 
 
-document.querySelectorAll('header a').forEach(link => {
+document.querySelectorAll('.linkRef').forEach(link => {
 
     
     if (link.getAttribute('href').split('/').pop() === currentPage) {
@@ -73,24 +108,56 @@ document.querySelectorAll('header a').forEach(link => {
 
 
 
+
+
 function checkWindowSize(windowSize) {
-  if (windowSize.matches) { // If media query matches meaning its < 700px
-    title.textContent = "JI"
-  } else {
-  title.textContent = "James Ihlenfeldt"
-  }
+    
+    var navButtons = document.querySelectorAll(".linkRef");
+    
+    
+  
+  
+    if (windowSize.matches) 
+    { // If media query matches meaning its < 700px
+
+     document.querySelectorAll(".linkRef").forEach(element => {
+        
+      
+        var icon = element.querySelector('img')
+        if (icon)
+            icon.classList.toggle("hidden")
+         var name = element.querySelector('p')
+        if (name)
+            name.classList.toggle("hidden");
+        
+        
+     });
+     return true
+    } 
+  else 
+    {
+
+      document.querySelectorAll(".linkRef").forEach(element => {
+        
+      
+        var icon = element.querySelector('img')
+        if (icon)
+            icon.classList.toggle("hidden")
+         var name = element.querySelector('p')
+        if (name)
+            name.classList.toggle("hidden");
+        
+        
+     });
+     return false
+    }
+    return false
 }
 
-// Create a MediaQueryList object
-var windowSize = window.matchMedia("(max-width: 700px)")
 
 // Call listener function at run time
 checkWindowSize(windowSize);
 
-// Attach listener function on state changes
-windowSize.addEventListener("change", function() {
-  checkWindowSize(windowSize);
-});
 
 var headPart = document.querySelector("head");
 var SuezFont = document.createElement("link");
