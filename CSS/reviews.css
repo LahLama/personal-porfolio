@@ -1,0 +1,58 @@
+
+
+.ratingCard
+{
+    max-width:500px;
+    border: 4px var(--accent) solid; 
+}
+
+.reviewImage
+{
+    height: 250px;
+    width: 250px;
+   
+    object-fit: cover; 
+    object-position: center; 
+    position: relative;
+   
+}
+
+.reviewInfo{
+    padding: 24px;
+    background-color: var(--secondary);
+    border-top-left-radius: 25% ;
+    border-top-right-radius: 25%;
+    margin-top: -45px;
+    position: relative;
+    max-width: 250px;   
+}
+
+
+.expandReviewBtn,.expandAllReviewsBtn
+{
+
+    background-color: var(--default);
+    padding: 12px;
+    padding-left: 56px;
+    padding-right: 56px;
+    border-radius: 12px;
+    position:relative;
+    bottom: -25px;
+
+    cursor: pointer;
+}
+
+#ratingsContainer,#anaysisContainer
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap:1rem ;
+    justify-content:space-evenly;
+}

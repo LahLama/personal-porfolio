@@ -1,0 +1,76 @@
+
+.descriptionArea
+{
+    display: grid;
+    grid-template-columns: 250px minmax(150px,1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+
+.gameImage
+{
+    height: 250px;
+    width: 250px;
+    border-radius: 12px;
+    object-fit: cover; 
+    object-position: top; 
+}
+
+
+.presentCard 
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+
+.infoArea
+{
+    background: var(--secondaryTrans) ;     
+    max-width: 500px;
+    padding: 1rem;
+    padding-top: 2%;
+    border-radius:  15px;  
+   
+    max-height:250px;
+    min-height: 250px;
+    overflow: scroll;
+}
+
+.descriptionArea,
+.infoArea
+{
+    min-width: 0;
+}
+@media screen and (min-width: 0px) and (max-width: 300px)
+{
+    .presentCard
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .descriptionArea
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backButton { order: 1; }
+    .forwardButton{ order: 1; }
+
+
+
+
+}
+
+
+
+

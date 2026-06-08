@@ -1,0 +1,39 @@
+main
+{
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) 150px;
+    gap: 35px;
+}
+
+#CarouselContainer,
+#TimelineContainer,
+.classContainer,
+.descriptionArea,
+.infoArea
+{
+    min-width: 0;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 300px)
+
+{
+main
+{
+    display: flex;
+    width: 100%;
+    gap: 35px;
+}
+
+#CarouselContainer,
+#TimelineContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#TimelineContainer
+{display: none;}
+
+}
