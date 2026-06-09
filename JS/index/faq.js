@@ -1,15 +1,10 @@
+const questions = document.querySelectorAll(".faq_q");
 
-
-const questions = document.querySelectorAll(".faq_q") 
 questions.forEach(element => {
-    element.addEventListener("click", showAnswer)
+    element.addEventListener("click", () => showAnswer(element));
 });
 
 function showAnswer(faq_Q) {
-    this.querySelector(".faq_question") .classList.toggle("rotated");
-    const answer = this.parentElement.querySelector(".faq_answer");
-    answer.classList.toggle("hidden")
-    console.log(answer);
-    
-        
+    faq_Q.querySelector(".faq_question").classList.toggle("rotated");
+    faq_Q.querySelector(".faq_answer").classList.toggle("hidden");
 }
