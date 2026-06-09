@@ -45,6 +45,7 @@ body {
     background: var(--mainTwo);
     margin-right: 4rem;
     margin-left: 4rem;
+   
     background-image:
         radial-gradient(circle at 10% 10%, var(--neutral) 0%, transparent 40%),
         radial-gradient(circle at 90% 90%, var(--secondary) 0%, transparent 40%),
@@ -209,7 +210,8 @@ footer {
         min-height: 100vh;
         margin: 0;
         /* Space to allow for no clipping of the header */
-        margin-bottom: 50px; 
+        margin-bottom: 75px; 
+        
     }
 
     header {
