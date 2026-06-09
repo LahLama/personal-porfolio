@@ -1,26 +1,3 @@
-pages = [
-
-    {
-        name: "home",
-        link: "/index.html"
-    },
-    {
-        name : "contact",
-        link: "/HTML/contact.html"
-    },
-    {
-        name : "games",
-        link: "/HTML/games.html"
-    },
-    {
-        name: "projects",
-        link: "/HTML/projects.html"
-    },
-    {
-        name: "reviews",
-        link: "/HTML/reviews.html"
-    },
-]
 const footer = document.querySelector("footer")
 
 function renderSitemap()
@@ -38,7 +15,7 @@ function renderSitemap()
         <p>@ James Ihlenfeldt 2026</p>
     </section>`
 
-    const sitemapContainer = document.createElement("ol")
+    const sitemapContainer = document.createElement("div")
    
     sitemapContainer.classList.add("sitemapContainer")
 
@@ -53,23 +30,30 @@ function renderSitemap()
 
 function renderSitemapItems(page)
 {
-    const newListItem = document.createElement("li")
-    const newLink = document.createElement("a");
    
+    const newLink = document.createElement("a");
+    
+    const newLinkIcon = document.createElement("img");
+    newLinkIcon.setAttribute("src", page.icon);
+    newLinkIcon.setAttribute("alt", "icon image for " + page.name);
+    newLinkIcon.classList.add("linkIconImage")
    
 
     newLink.setAttribute("href", page.link);
     newLink.textContent = page.name.toUpperCase()
+    if (newLink.textContent == "JAMES IHLENFELDT")
+        newLink.textContent = "HOME"
 
+   
+    newLink.append(newLinkIcon)
     
-    newListItem.append(newLink)
 
 
-    return newListItem
+    return newLink
 }
 function renderList(item)
 {
-    const newItem = document.createElement("li")
+    const newItem = document.createElement("a")
     newItem.innerHTML = item;
     
     return newItem

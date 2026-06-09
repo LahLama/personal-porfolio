@@ -207,18 +207,34 @@ footer {
     align-items: center;
 }
 
+    .linkIconImage
+    {
+        margin-top: 4px;
+        width: 25px;
+        aspect-ratio: 1 / 1;
+        position: relative;
+  top: 5px;
+    }
+
+
 #contact
 {
     gap: 50px;
 }
 
-#sitemap li{
-    list-style-type: none;
-}
 
-li{
+
+#sitemap a{
     text-decoration: none;
     font-size: 18px;  
+    padding:4px;
+    background: var(--secondary);
+    border-radius: 12px;
+    margin:2px;
+    font-weight: bolder;
+
+   
+   
 }
 
 /* Utility */
