@@ -5,7 +5,7 @@ const games = [
     img: "/ASSETS/IMAGES/games/fullGames/theNun.webp",
     gameTitle: "The Nun",
     role: "Core Coder",
-    description: "Made for Wits Digital Arts 2nd Semester Project. We  had the experience to make our first 3d game with our own hand crafted objects. The Nun follow your character as they are compelled to search for their friend that has gone missing. But to find this friend you will need to unlock a series of rooms! Do enjoy. Although this our final project there are areas for improvement. ",
+    description: "Made for Wits Digital Arts 2nd Semester Project. We  had the experience to make our first 3d game with our own hand crafted objects. The Nun follows your character as they are compelled to search for their friend that has gone missing. But to find this friend you will need to unlock a series of rooms! Do enjoy. Although this is our final project there are areas for improvement. ",
     link: "https://lahlama.itch.io/the-nun"
   },
   {
