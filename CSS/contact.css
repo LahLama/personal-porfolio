@@ -96,7 +96,17 @@ img
     width: 75px;
     height: 75px;
  }
+  .mediaPage {
+    display: flex;
+    align-items: center;
+  }
 
+      img{
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-self: center;
+    }
 }
 
 
@@ -109,7 +119,8 @@ img
     }
 
     .mediaPage {
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 #circleLinks
@@ -127,3 +138,4 @@ img
     height: 50px;
  }
 }
+
