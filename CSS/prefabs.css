@@ -27,6 +27,7 @@ h3 {
 
 :root {
     --mainOne:       #163f9879;
+    --mainOneSolid:       #163f98;
     --mainTwo:       #ece6f4;
     --secondary:     #73abe2;
     --secondaryTrans:#73abe279;
@@ -126,6 +127,9 @@ body {
 header {
     padding: 25px;
     background: linear-gradient(180deg, #163f98 0%, #163f9885 50%, #163f9800 100%);
+    border-radius: 25px;
+    border-top-left-radius:0px ;
+    border-top-right-radius: 0px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
@@ -192,6 +196,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 
 /* Tablet + Phone */
 @media screen and (min-width: 0px) and (max-width: 768px) {

@@ -5,6 +5,13 @@ main
     gap: 35px;
 }
 
+.descriptionArea
+{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #CarouselContainer,
 #TimelineContainer,
 .classContainer,
@@ -14,6 +21,43 @@ main
     min-width: 0;
 }
 
+#TimelineContainer .infoArea
+{
+    height: fit-content;
+}
+
+ul
+{
+    list-style-type:none;
+}
+
+.itemRight,.itemLeft{
+    border-bottom: 2px dashed var(--accent) ;
+    
+}
+
+.itemLeft
+{
+   text-align: left;
+   margin-right: 50%;
+
+}
+
+#timelineLine
+{
+    height: 90%;
+    background-color: var(--accent);
+    width: 2%;
+    position: absolute;
+    left: 50%;
+   
+}
+
+.itemRight
+{
+  text-align: right;
+  margin-left: 50%;
+}
 
 @media screen and (min-width: 0px) and (max-width: 768px)
 

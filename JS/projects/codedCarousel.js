@@ -2,7 +2,7 @@ const codedProjects = [
   {
     id: 1,
     img: "/ASSETS/IMAGES/projects/coded/morabaraba.png",
-    gameTitle: "TaskFlow",
+    gameTitle: "Morabaraba",
     role: "Multiplayer Developer",
     description: "Built a Digitized version of morabaraba. Includes playing against a player and against an AI. Various board types are also included.",
     link: ""

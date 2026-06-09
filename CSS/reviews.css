@@ -1,7 +1,8 @@
 
 
 .ratingCard
-{
+{    display: flex;
+    flex-direction: column;
     max-width:500px;
     border: 4px var(--accent) solid; 
 }
@@ -19,14 +20,25 @@
 
 .reviewInfo{
     padding: 24px;
-    background-color: var(--secondary);
+    background-color: var(--mainOneSolid);
     border-top-left-radius: 25% ;
     border-top-right-radius: 25%;
     margin-top: -45px;
     position: relative;
-    max-width: 250px;   
+    max-width: 250px;  
+    display: flex;
+    flex-direction: column; 
+    flex-grow: 1;
 }
 
+.reviewInfo p {
+    flex-grow: 1;
+}
+.reviewInfo a {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
 
 .expandReviewBtn,.expandAllReviewsBtn
 {
@@ -36,8 +48,8 @@
     padding-left: 56px;
     padding-right: 56px;
     border-radius: 12px;
-    position:relative;
-    bottom: -25px;
+    position: static;
+   
 
     cursor: pointer;
 }
