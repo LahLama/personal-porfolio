@@ -114,8 +114,11 @@ body {
 
 /* Whitespace image */
 .whitespaceImage {
-    background-image: url("../ASSETS/IMAGES/test1.png");
-    background-size: cover;
+    /* https://www.svgrepo.com/svg/518952/retrobreaker */
+    background-image: url("../ASSETS/IMAGES/prefabs/whitespaceImage.svg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 /* Header */
@@ -152,9 +155,10 @@ header a:hover {
     text-decoration: underline;
 }
 
-header a.active {
-    color: var(--accent);
+.linkRef.active .linkName {
+    
     font-weight: 1000;
+    color: var(--accent);
 }
 
 /* Footer */

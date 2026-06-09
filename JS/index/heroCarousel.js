@@ -7,31 +7,21 @@ let imagesCycle = [
     },
     {
         id: 1,
-        link: "/ASSETS/IMAGES/games/prototypes/colourSwitch.png",
-        name: "Colour Switch Prototype",
-    },
-    {
-        id: 2,
         link: "/ASSETS/IMAGES/games/prototypes/braaiSimulator.png",
         name: "Braai Simulator Prototype",
     },
     {
-        id: 3,
+        id: 2,
         link: "/ASSETS/IMAGES/projects/coded/morabaraba.png",
         name: "Morabaraba Project",
     },
     {
-        id: 4,
-        link: "/ASSETS/IMAGES/projects/coded/1024.png",
-        name: "1024 Project",
-    },
-    {
-        id: 5,
+        id: 3,
         link: "/ASSETS/IMAGES/projects/practical/intergratedSystem.jpg",
         name: "3 Way Intergrated System",
     },
     {
-        id: 6,
+        id: 4,
         link: "/ASSETS/IMAGES/projects/practical/keypadSystem.jpg",
         name: "Key Pad System",
     },   
