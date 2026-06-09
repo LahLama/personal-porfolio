@@ -26,18 +26,10 @@ const gameReviews = [
     gameTitle: "Twilight Observer by WhiteScar Studios",
     description: "Music choices were good, it added to the atmosphere and did not distract the player from the main action of the game being the dialogue. Good character introductions...",
     link: "https://gamesense.co/game/others/reviews/discuss/twilight-observer-by-whitescar-studios/"
-  },
-  // {
-  //   id: 5,
-  //   img: "/ASSETS/IMAGES/reviews/ratings/",
-  //   gameTitle: "Pulsebreak",
-  //   description: "A rhythm-action hybrid that blends tight combat with an infectious soundtrack, making every encounter feel satisfying and deliberate.",
-  //   link: "https://www.example.com"
-  // }
+  }
 ];
 
 const showButton = document.querySelector("#ratingsShowAll");
-// const hideButton = document.querySelector("#testimonail_forwardButton");
 const reviewCont = document.querySelector("#cards_ratings");
 let isShowing = false;
 showButton.addEventListener("click", showAllReviews);
@@ -78,7 +70,7 @@ function renderReview(review) {
     card.setAttribute("data-id", review.id);
 
     card.innerHTML =`
-   <img src="${review.img}" alt="image of the game" class="reviewImage">
+   <img src="${review.img}" alt="image of the game ${review.gameTitle}" class="reviewImage">
     <div class="center reviewInfo ">
         <h2> ${review.gameTitle} </h2>
         <p> ${review.description}</p>

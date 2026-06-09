@@ -69,7 +69,7 @@ function renderAnalysis(review) {
     card.setAttribute("data-id", review.id);
 
     card.innerHTML =`
-   <img src="${review.img}" alt="image of the game" class="reviewImage">
+   <img src="${review.img}" alt="image of the game ${review.gameTitle}" class="reviewImage">
     <div class="center reviewInfo ">
         <h2> ${review.gameTitle} </h2>
         <p> ${review.description}</p>

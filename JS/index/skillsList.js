@@ -38,17 +38,6 @@ skills = [
     }
 ]
 
-    // <div id="skills">
-    //     <h2>Skills</h2>
-    //     <div id="skillsContainer" class="classContainer">
-    //         <div id="skill">
-    //             <div id="bubbles"> 
-    //                 <div class="skillCircle"></div>    
-    //             </div>
-    //             <div id="name"> Unity</div>
-    //         </div>
-    //     </div>
-    // </div>
     
 skills.forEach(skill => {
     // finds the skill container

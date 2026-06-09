@@ -19,7 +19,7 @@ if (!list || list.length === 0) return;
     const item_ = list[index];
 
     card_.innerHTML = `
-    <img class="gameImage" src="${item_.img}">
+    <img class="gameImage" src="${item_.img} alt="Image of ${item_.gameTitle}">
     <div class="infoArea" >
         <h2> ${item_.gameTitle} </h2>
         <h5> ${item_.role}</h5>

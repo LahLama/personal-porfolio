@@ -1,6 +1,6 @@
 const latestPosts = [
   {
-    id: 2,
+    id: 0,
     name: "LinkedIn - Latest Post",
     img: "/ASSETS/IMAGES/contact/posts/linkedin.webp",
     caption: "I’ve spent the past week settling into the creative flow at Lama Rama Cafe. This was for the purposes of learning how to use Figma and to delve deeper into incorporating JS into modifying the CSS and HTML of the website.   I’ve included the reference image I created in the comments below.  What's your favorite drink? For me it has to be a Hug in a Mug.☕🍵  #WebDevelopment #Javascript #UIUX #Figma #FrontEndDev #LamaRamaCafe #CodingJourney",
@@ -8,7 +8,7 @@ const latestPosts = [
   },
   
   {
-    id: 3,
+    id: 1,
     name: "Itch.io - Latest Post",
     img: "/ASSETS/IMAGES/contact/posts/itch.webp",
     caption: "Colour Switch  A simple colour switching prototype made in just 24 hours.   Not meant to be a full game, just a little proof of concept :D  if you do decide to check it out, let me know how you found it :D.",
@@ -28,7 +28,7 @@ latestPosts.forEach(page => {
 
     newPost.innerHTML = `
         <h2> ${page.name} </h2>
-        <img src=${page.img} height="256px" width="256px">
+        <img src=${page.img} alt="${page.caption}">
         <p> ${page.caption} </p>
     `;
 

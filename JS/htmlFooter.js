@@ -47,7 +47,7 @@ function renderSitemap()
         sitemapContainer.append(newSiteItem)
 
     });
-    // footer.classList.add("classContainer")
+
     document.querySelector("#sitemap").append(sitemapContainer);
 }
 
