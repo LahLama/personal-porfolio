@@ -1,45 +1,38 @@
 const testimonials = [
   {
     id: 1,
-    name: "Jim",
-    job: "Developer",
-    img: "./ASSETS/IMAGES/test1.png",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur? Laboriosam deserunt dolores, nobis fuga ipsam doloremque",
+    name: "Jim Davis",
+    job: "Game Developer",
+    img: "./ASSETS/IMAGES/about/testimonials/jimDavis.jpg",
+    text: "Working with James was an absolute pleasure. He delivered a polished product on time and went above and beyond to make sure every detail was just right.",
   },
   {
     id: 2,
-    name: "Buhle",
-    job: "Designer",
-    img: "./ASSETS/IMAGES/test1.png",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur? Laboriosam deserunt dolores, nobis fuga ipsam doloremque",
+    name: "Buhle Shugu",
+    job: "UI/UX Designer",
+    img: "./ASSETS/IMAGES/about/testimonials/Anonymous.svg",
+    text: "I was blown away by the attention to detail and the clean, modern design. It perfectly captured the vision I had in my head but couldn't quite articulate.",
   },
   {
     id: 3,
-    name: "Young",
-    job: "Manager",
-    img: "./ASSETS/IMAGES/test1.png",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur? Laboriosam deserunt dolores, nobis fuga ipsam doloremque",
-  },
-  {
-    id: 4,
-    name: "Ghey",
-    job: "Analyst",
-    img: "./ASSETS/IMAGES/test1.png",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, tenetur? Laboriosam deserunt dolores, nobis fuga ipsam doloremque",
-  },
+    name: "Mbali Tempi",
+    job: "Product Manager",
+    img: "./ASSETS/IMAGES/about/testimonials/Anonymous.svg",
+    text: "From the first meeting to the final handoff, the communication was clear and professional. I would not hesitate to recommend them to anyone looking for quality work.",
+  }
 ];
 
 
-let currentIndex = 0;
+let TesitmonalCurrentIndex = 0;
 
-const prevButton = document.querySelector("#testimonal_backButton");
-const nextButton = document.querySelector("#testimonal_forwardButton");
+const  TesitmonialprevButton = document.querySelector("#testimonal_backButton");
+const  TesitmonialnextButton = document.querySelector("#testimonal_forwardButton");
 
-prevButton.addEventListener("click", prevReview);
-nextButton.addEventListener("click", nextReview);
+ TesitmonialprevButton.addEventListener("click", prevTesitmonial);
+ TesitmonialnextButton.addEventListener("click", nextTesitmonial);
 
 
-function renderReview(index) {
+function renderTesitmonial(index) {
   const review = testimonials[index];
   const card = document.querySelector("#testimonialCard");
 
@@ -50,22 +43,22 @@ function renderReview(index) {
   <img src="${review.img}" id="person-img" alt="${review.name}">
   <div class="testimonialInfo">
     <h2>${review.name}</h2>
-    <h2>${review.job}</h2>
+    <h3>${review.job}</h3>
     <p>${review.text}</p>
   </div>`;
 
 }
 
-function nextReview() {
-  currentIndex = (currentIndex + 1) % testimonials.length;
-  renderReview(currentIndex);
+function nextTesitmonial() {
+  TesitmonalCurrentIndex = (TesitmonalCurrentIndex + 1) % testimonials.length;
+  renderTesitmonial(TesitmonalCurrentIndex);
 }
 
-function prevReview() {
-  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-  renderReview(currentIndex);
+function prevTesitmonial() {
+  TesitmonalCurrentIndex = (TesitmonalCurrentIndex - 1 + testimonials.length) % testimonials.length;
+  renderTesitmonial(TesitmonalCurrentIndex);
 }
 
 
 // Render the first review on load
-renderReview(currentIndex);
+renderTesitmonial(TesitmonalCurrentIndex);

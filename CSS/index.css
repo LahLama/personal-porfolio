@@ -104,22 +104,26 @@ h2 {
     grid-template-columns: 2fr 1fr;
 }
 
-.faq_q {
+.faq_header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-    padding: 7px 20px;
-    border-bottom: 4px solid var(--mainTwo);
+    gap: 15px;
+    border-bottom: 2px solid var(--mainTwo);
     cursor: pointer;
     transition: background 0.15s;
+    padding: 12px;
+}
+
+.faq_header h2 {
+    margin: 0;
+    
 }
 
 .faq_answer {
+    margin-top: 15px;
     width: 100%;
-    padding: 0 0 4px 52px;
-    max-height: 200px;
-    overflow: hidden;
+    border-bottom: 2px solid var(--mainTwo);
+     padding-bottom: 12px;
 }
 
 .button-container {
