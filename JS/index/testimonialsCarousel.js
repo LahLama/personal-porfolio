@@ -3,7 +3,7 @@ const testimonials = [
     id: 1,
     name: "Jim Davis",
     job: "Game Developer",
-    img: "./ASSETS/IMAGES/about/testimonials/jimDavis.jpg",
+    img: "./ASSETS/IMAGES/about/testimonials/jimDavis.webp",
     text: "Working with James was an absolute pleasure. He delivered a polished product on time and went above and beyond to make sure every detail was just right.",
   },
   {

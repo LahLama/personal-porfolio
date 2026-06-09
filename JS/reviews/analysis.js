@@ -3,7 +3,7 @@ const gameAnalysis = [
   {
     id: 1,
     // https://minecraft.wiki/index.php?curid=174898
-    img: "/ASSETS/IMAGES/reviews/analysis/minecraft.jpg",
+    img: "/ASSETS/IMAGES/reviews/analysis/minecraft.webp",
     gameTitle: "Minecraft",
     description: "An analysis of how Minecraft guides the player through tutorialization through ingame structures and events.Minecraft uses a digetic tutorial system...",
     link: "https://drive.google.com/file/d/1JuItGgKWlYjTOXxsrw3isMycrHnLOgM3/view?usp=drive_link"
@@ -11,15 +11,15 @@ const gameAnalysis = [
   {
     id: 2,
     // https://www.mobygames.com/game/234101/marvel-rivals/cover/group-407559/cover-973165/
-    img: "/ASSETS/IMAGES/reviews/analysis/marvelRivals.jpg",
+    img: "/ASSETS/IMAGES/reviews/analysis/marvelRivals.webp",
     gameTitle: "Marvel Rivals",
     description: "A breakdown of how Marvel Rivals as branched from the generic superhero shooter genre and how it's stylistic choices were implemented...",
     link: "https://drive.google.com/file/d/1zjRFkqj15WFmcw3lursSqREOBHmZhsgG/view?usp=drive_link"
   },
   {
     id: 3,
-    //https://en.uesp.net/wiki/File:SR-cover-Skyrim_Box_Art.jpg
-    img: "/ASSETS/IMAGES/reviews/analysis/skyrim.jpg  ",
+    //https://en.uesp.net/wiki/File:SR-cover-Skyrim_Box_Art.webp
+    img: "/ASSETS/IMAGES/reviews/analysis/skyrim.webp  ",
     gameTitle: "Minecraft and Skyrim",
     description: "A comparision of how two games from different generes, being Openworld RPG and the other, Openworld sandbox relate with music and audio design...",
     link: "https://drive.google.com/file/d/12er1YlNTSF2jFcnerl1vL4YvD-dR3ajT/view?usp=drive_link"

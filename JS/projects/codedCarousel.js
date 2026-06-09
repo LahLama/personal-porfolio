@@ -1,7 +1,7 @@
 const codedProjects = [
   {
     id: 1,
-    img: "/ASSETS/IMAGES/projects/coded/morabaraba.png",
+    img: "/ASSETS/IMAGES/projects/coded/morabaraba.webp",
     gameTitle: "Morabaraba",
     role: "Multiplayer Developer",
     description: "Built a Digitized version of morabaraba. Includes playing against a player and against an AI. Various board types are also included.",
@@ -9,7 +9,7 @@ const codedProjects = [
   },
   {
     id: 2,
-    img: "/ASSETS/IMAGES/projects/coded/1024.png",
+    img: "/ASSETS/IMAGES/projects/coded/1024.webp",
     gameTitle: "1024 in C++",
     role: "Co-Developer",
     description: "Developed a version of 1024 in C++ in a team of two for a Software Development Course",

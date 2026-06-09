@@ -2,7 +2,7 @@ const gameJams = [
   {
     // (Use the password WitsPrototypes to unlock the game!)
     id: 1,
-    img: "/ASSETS/IMAGES/games/gameJams/fishRescue.png",
+    img: "/ASSETS/IMAGES/games/gameJams/fishRescue.webp",
     gameTitle: "Fish Rescue",
     role: "Primary Developer and Designer",
     description: "You are in charge of a rescue center on the banks of a river. Fish was ashore needing your help.   You are tasked to save these fish and rehabilitate them.   Feed Them. Make them Comfortable. Give them love. Then release them! (Use the password WitsPrototypes to unlock the game!)",
@@ -10,7 +10,7 @@ const gameJams = [
   },
   {
     id: 2,
-    img: "/ASSETS/IMAGES/games/gameJams/pacMan.png",
+    img: "/ASSETS/IMAGES/games/gameJams/pacMan.webp",
     gameTitle: "Pacman Recreation",
     role: "Primary Developer and Designer",
     description: "An attempt at recreating the classic maze arcade game Pac-Man! BUT with a twist of a new repellent ghost!.  (Use the password WitsPrototypes to unlock the game!)",
