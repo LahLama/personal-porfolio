@@ -63,7 +63,7 @@
 
 /* Testimonials */
 #testimonialCard {
-    background: var(--secondary);
+    background: var(--secondaryTrans);
     display: flex;
     padding: 25px;
     max-width: 500px;
