@@ -327,10 +327,10 @@ li{
 }
 
 /* Tablet */
-@media screen and (min-width: 300px) and (max-width: 768px) {
-    main {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    /* main {
         background-color: rgba(255, 111, 0, 0.362);
-    }
+    } */
 
     *{
     font-size: 15px;
@@ -352,10 +352,10 @@ li{
 }
 
 /* Phone */
-@media screen and (min-width: 0px) and (max-width: 300px) {
-    main {
+@media screen and (min-width: 0px) and (max-width: 479px) {
+    /* main {
         background-color: rgba(0, 255, 17, 0.407);
-    }
+    } */
 
     
     *{
