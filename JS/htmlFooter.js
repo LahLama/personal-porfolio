@@ -36,9 +36,7 @@ function renderSitemap()
         </div>
         
         <p>@ James Ihlenfeldt 2026</p>
-    </section>
-    
-    <div id="endBar"></div>`
+    </section>`
 
     const sitemapContainer = document.createElement("ol")
    

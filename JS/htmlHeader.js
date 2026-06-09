@@ -108,8 +108,6 @@ document.querySelectorAll('.linkRef').forEach(link => {
 
 
 
-
-
 function checkWindowSize(windowSize) {
     
     var navButtons = document.querySelectorAll(".linkRef");

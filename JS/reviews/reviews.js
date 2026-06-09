@@ -37,7 +37,7 @@ const gameReviews = [
 ];
 
 const showButton = document.querySelector("#ratingsShowAll");
-// const hideButton = document.querySelector("#testimonal_forwardButton");
+// const hideButton = document.querySelector("#testimonail_forwardButton");
 const reviewCont = document.querySelector("#cards_ratings");
 let isShowing = false;
 showButton.addEventListener("click", showAllReviews);

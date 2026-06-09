@@ -1,6 +1,4 @@
-h2 {
-    color: var(--mainTwo);
-}
+
 
 #heroContainer {
     position: relative;
@@ -69,12 +67,9 @@ h2 {
     display: flex;
     padding: 25px;
     max-width: 500px;
-
-    max-height: 200px;
-;
     border-radius: 12px;
     justify-self: center;
-    overflow: scroll;
+
 }
 
 .testimonialInfo {
@@ -84,7 +79,7 @@ h2 {
     flex: 1;
 }
 
-#TestimonalAndButtons {
+#TestimonailAndButtons {
     display: grid;
     justify-content: space-evenly;
     align-items: center;
@@ -159,9 +154,7 @@ h2 {
 
 /* Tablet */
 @media screen and (min-width: 480px) and (max-width: 768px) {
-    main {
-        background-color: lightgreen;
-    }
+
 
     #AboutMe_SkillsContainer {
         grid-template-columns: 1fr;
@@ -170,9 +163,7 @@ h2 {
 
 /* Phone */
 @media screen and (min-width: 0px) and (max-width: 480px) {
-    main {
-        background-color: lightblue;
-    }
+
 
     #heroContainer
     {display: none;}
@@ -181,7 +172,7 @@ h2 {
         display: block;
     }
 
-     #TestimonalAndButtons {
+     #TestimonailAndButtons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -193,6 +184,6 @@ h2 {
         flex: 0 0 100%; 
     }
 
-    #testimonal_backButton { order: 1; }
-    #testimonal_forwardButton { order: 1; }
+    #testimonail_backButton { order: 1; }
+    #testimonail_forwardButton { order: 1; }
 }

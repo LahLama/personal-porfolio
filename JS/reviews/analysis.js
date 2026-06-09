@@ -28,7 +28,7 @@ const gameAnalysis = [
 ];
 
 const showAnalyisButton = document.querySelector("#analysisShowAll");
-// const hideButton = document.querySelector("#testimonal_forwardButton");
+// const hideButton = document.querySelector("#testimonail_forwardButton");
 const analysisCont = document.querySelector("#cards_analysis");
 let isCardsShowing = false;
 showAnalyisButton.addEventListener("click", showAllAnalysis);

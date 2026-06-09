@@ -1,12 +1,5 @@
 const latestPosts = [
   {
-    id: 1,
-    name: "Instagram - Latest Post",
-    img: "/ASSETS/IMAGES/contact/posts/instagram.webp",
-    caption: "What a great day yesterday!  Literally an unforgettable experience!  The group plan finally made it out of the group chat 😂🔥",
-    link: "https://www.instagram.com/p/DYbzh16CL9n/?img_index=1"
-  },
-  {
     id: 2,
     name: "LinkedIn - Latest Post",
     img: "/ASSETS/IMAGES/contact/posts/linkedin.webp",

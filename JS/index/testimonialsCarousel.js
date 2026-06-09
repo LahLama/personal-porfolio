@@ -25,8 +25,8 @@ const testimonials = [
 
 let TesitmonalCurrentIndex = 0;
 
-const  TesitmonialprevButton = document.querySelector("#testimonal_backButton");
-const  TesitmonialnextButton = document.querySelector("#testimonal_forwardButton");
+const  TesitmonialprevButton = document.querySelector("#testimonail_backButton");
+const  TesitmonialnextButton = document.querySelector("#testimonail_forwardButton");
 
  TesitmonialprevButton.addEventListener("click", prevTesitmonial);
  TesitmonialnextButton.addEventListener("click", nextTesitmonial);

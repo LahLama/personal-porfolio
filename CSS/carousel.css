@@ -5,7 +5,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: center;
-    overflow: scroll;
+
 }
 
 
@@ -39,8 +39,8 @@
     padding-top: 2%;
     border-radius:  15px;  
    
-    max-height: 250px;
-    overflow: auto;
+    min-height: 250px;
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px)
