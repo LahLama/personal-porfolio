@@ -1,4 +1,4 @@
-  window.BASE = window.location.pathname.includes("/html/")
+  window.BASE = window.location.pathname.includes("/HTML/")
     ? "../"
     : "./";
 
