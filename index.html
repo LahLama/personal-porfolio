@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    
+
     <link rel="stylesheet" href="CSS/prefabs.css" type="text/css">
     <link rel="stylesheet" href="CSS/index.css" type="text/css">
-
-    
     <link rel="icon" href="ASSETS/IMAGES/prefabs/JI.svg">
 
-
-    <!-- Scripts --> 
+    <!-- Scripts -->
     <script src="JS/htmlHeader.js" defer></script>
     <script src="JS/htmlFooter.js" defer></script>
     <script src="JS/progressButton.js" defer></script>
@@ -20,143 +17,125 @@
     <script src="JS/index/testimonialsCarousel.js" defer></script>
     <script src="JS/index/heroCarousel.js" defer></script>
     <script src="JS/index/faq.js" defer></script>
-    
-   
-    <!--  -->
-
-   
 </head>
+
 <body>
-    <header>
 
-    </header>
+<header></header>
 
+<main>
 
-    <main>
-        <section id="heroContainer" class="classContainer">
+    <section id="heroContainer" class="classContainer">
+        <div id="heroImageBack"></div>
+        <div id="heroImage"></div>
+        <div id="imageSelect"></div>
+    </section>
 
-            <div id="heroImageBack"></div>
-            <div id="heroImage"></div>
+    <section id="AboutMe_SkillsContainer">
 
-            <div id="imageSelect"></div>
-        </section>
+        <div id="aboutMe" class="classContainer center">
+            <h2>About Me</h2>
+            <img src="./ASSETS/IMAGES/about/james.webp" id="aboutMeImg" alt="Image of James Ihlenfeldt">
 
-        <section id="AboutMe_SkillsContainer">
-            <div id="aboutMe" class="classContainer center">
-                <h2>About Me</h2>
-                <img src="./ASSETS/IMAGES/about/james.webp" id="aboutMeImg" alt="Image of James Ihlenfeldt" >
-                <p id="aboutMeDesc">
-                   I am currently working on getting my BEng Sc in Digital Arts Degree from Wits University. I'm looking to collaborate on games primarily unity games. I am currently learning web development (CSS,JS,HTML) <br> Fun fact : Even though I am also known as LahLama, I don't like LLamas 😂                </p>           
-            </div>
-            
-            <div id="skills" class="classContainer">
-                <h2>Skills</h2>
-                <div id="skillsContainer" >
-                    <!-- <div id="skill">
-                    </div> -->
-                </div>
-            </div>
-        </section>
+            <p id="aboutMeDesc">
+                I am currently working on getting my BEng Sc in Digital Arts Degree from Wits University. I'm looking to collaborate on games, primarily Unity games but I am willing to explore other Game Engines. I am currently learning web development (CSS, JS, HTML). <br>
+                Fun fact: Even though I am also known as LahLama, I don't like llamas 😂
+            </p>
+        </div>
 
-        <section id="Testimonials" class="classContainer  " >
-            <h2>Tesitmonials</h2>
-            <div id="TestimonailAndButtons">
-                <button id="testimonail_backButton" class="pressButton backButton">
-                    <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
-                </button>
+        <div id="skills" class="classContainer">
+            <h2>Skills</h2>
+            <div id="skillsContainer"></div>
+        </div>
 
-                <div id="testimonialCard" >
-                  
-                </div>
-                    
-                    <button id="testimonail_forwardButton" class="pressButton forwardButton">
-                        <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
+    </section>
+
+    <section id="Testimonials" class="classContainer">
+
+        <h2>Testimonials</h2>
+
+        <div id="TestimonailAndButtons">
+
+            <button id="testimonail_backButton" class="pressButton backButton">
+                <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
+            </button>
+
+            <div id="testimonialCard"></div>
+
+            <button id="testimonail_forwardButton" class="pressButton forwardButton">
+                <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="FAQandImage">
+
+        <div id="FAQ" class="classContainer">
+            <h2>FAQ</h2>
+
+            <div id="q1" class="faq_q">
+                <div class="faq_header">
+                    <button class="pressButton faq_question forwardButton">
+                        <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
                     </button>
+                    <h2>How did I make my first game?</h2>
+                </div>
 
-                
+                <div class="faq_answer hidden">
+                    With Godot! Godot was in its starting phase and my laptop at that time couldn't handle Unity so I tried making a South African loadshedding game.
+                </div>
             </div>
-        </section>
 
-        <section id="FAQandImage">
-       <div id="FAQ" class="classContainer">
-    <h2>FAQ</h2>
+            <div id="q2" class="faq_q">
+                <div class="faq_header">
+                    <button class="pressButton faq_question forwardButton">
+                        <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
+                    </button>
+                    <h2>What are my Top Games?</h2>
+                </div>
 
-    <div id="q1" class="faq_q">
+                <div class="faq_answer hidden">
+                    Currently, in no particular order: Minecraft, Marvel Rivals, Skyrim, Kingdom Hearts 2 and Lego Batman The Videogame.
+                </div>
+            </div>
 
-        <div class="faq_header">
-            <button class="pressButton faq_question forwardButton">
-                <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
-            </button>
+            <div id="q3" class="faq_q">
+                <div class="faq_header">
+                    <button class="pressButton faq_question forwardButton">
+                        <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
+                    </button>
+                    <h2>What type of games do I try to make?</h2>
+                </div>
 
-            <h2>How did I make my first game?</h2>
+                <div class="faq_answer hidden">
+                    Most times without a specific genre, I try to make games with a central theme of South Africa. As a South African, I have first-hand knowledge about how diverse, amazing and breathtaking this country truly is, and I try to reflect that through my games.
+                </div>
+            </div>
+
+            <div id="q4" class="faq_q">
+                <div class="faq_header">
+                    <button class="pressButton faq_question forwardButton">
+                        <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
+                    </button>
+                    <h2>Where can I be found?</h2>
+                </div>
+
+                <div class="faq_answer hidden">
+                    Head over to the <a href="./HTML/contact.html">Contacts Page</a> to see all my socials and some of my latest posts.
+                </div>
+            </div>
+
         </div>
 
-        <div class="faq_answer hidden">
-            With Godot! Godot was in their starting phase and my laptop at that time couldn't handle unity so I tried making a South African Loadshedding game!
-        </div>
+        <div class="classContainer whitespaceImage"></div>
 
-    </div>
+    </section>
 
-    <div id="q2" class="faq_q">
+</main>
 
-        <div class="faq_header">
-            <button class="pressButton faq_question forwardButton">
-                <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
-            </button>
-
-            <h2>What are my Top Games?</h2>
-        </div>
-
-        <div class="faq_answer hidden">
-            Currently, in no particular order ... Minecraft, Marvel Rivals, Skyrim, Kingdom Hearts 2 and Lego Batman The Videogame.
-        </div>
-
-    </div>
-
-    <div id="q3" class="faq_q">
-
-        <div class="faq_header">
-            <button class="pressButton faq_question forwardButton">
-                <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
-            </button>
-
-            <h2>What type of games do I try to make?</h2>
-        </div>
-
-        <div class="faq_answer hidden">
-            Most times without any specific genre, I try to make games with a central theme being South Africa. As a South African, I have first hand knowledge about how diverse, amazing and breathtaking this country truly is, and I will try and relay that through my games.
-        </div>
-
-    </div>
-
-    <div id="q4" class="faq_q">
-
-        <div class="faq_header">
-            <button class="pressButton faq_question forwardButton">
-                <img src="./ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
-            </button>
-
-            <h2>Where can I be found?</h2>
-        </div>
-
-        <div class="faq_answer hidden">
-            Head over to the <a href="./HTML/contact.html">Contacts Page</a> to see all my socials and some of my latest posts.
-        </div>
-
-    </div>
-
-</div>
-        <div  class="classContainer whitespaceImage"></div>
-        </section>
-
-
-    </main>
-    
-    <footer>
-       
-    </footer>
-
-
+<footer></footer>
 
 </body>
 </html>

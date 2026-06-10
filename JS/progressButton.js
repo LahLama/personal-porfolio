@@ -1,34 +1,32 @@
-const progressBtnElement = document.createElement('nav');
+const progressBtnElement = document.createElement("nav");
 progressBtnElement.id = "pageTracker";
 
 progressBtnElement.innerHTML = `
     <button class="pressButton">
-        <img src="${BASE}ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
+        <img src="${BASE}ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon">
     </button>
 `;
 
-document.body.append(progressBtnElement);
+document.body.appendChild(progressBtnElement);
 
-let ProgressTrackerBtn = document.querySelector("#pageTracker")
+const progressTrackerBtn = document.querySelector("#pageTracker");
+const buttonElement = progressTrackerBtn.querySelector("button");
 
-ProgressTrackerBtn.addEventListener("click", returnToTop)
+progressTrackerBtn.addEventListener("click", returnToTop);
 
+function returnToTop()
+{
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+}
 
-
-function returnToTop() {
-    console.log(document.documentElement.scrollTop);
-  document.body.scrollTop = 0; // Safari
-  document.documentElement.scrollTop = 0; // Chrome, IE, Opera and Firefox
-}   
-
-let VisualElement = ProgressTrackerBtn.querySelector("button")
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () =>
+{
     const scrollTop = window.scrollY;
-
-    const documentHeight =
+    const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
 
-    const percent = (scrollTop / documentHeight) * 100;
+    const percent = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
 
-    VisualElement.style.setProperty("--scrollPercent", `${percent}%`);
+    buttonElement.style.setProperty("--scrollPercent", `${percent}%`);
 });

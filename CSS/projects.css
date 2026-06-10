@@ -8,8 +8,8 @@ main
 .descriptionArea
 {
     display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #CarouselContainer,
@@ -28,56 +28,56 @@ main
 
 ul
 {
-    list-style-type:none;
+    list-style-type: none;
 }
 
-.itemRight,.itemLeft{
-    border-bottom: 2px dashed var(--accent) ;
-    
+.itemRight,
+.itemLeft
+{
+    border-bottom: 2px dashed var(--accent);
 }
 
 .itemLeft
 {
-   text-align: left;
-   margin-right: 50%;
-
-}
-
-#timelineLine
-{
-    height: 90%;
-    background-color: var(--accent);
-    width: 2%;
-    position: absolute;
-    left: 50%;
-   
+    margin-right: 50%;
+    text-align: left;
 }
 
 .itemRight
 {
-  text-align: right;
-  margin-left: 50%;
+    margin-left: 50%;
+    text-align: right;
+}
+
+#timelineLine
+{
+    position: absolute;
+    left: 50%;
+
+    width: 2%;
+    height: 90%;
+
+    background-color: var(--accent);
 }
 
 /* Tablet + Phone */
-@media screen and (min-width: 0px) and (max-width: 768px)
+@media screen and (max-width: 768px)
 {
-main
-{
-    display: flex;
-    width: 100%;
-    gap: 35px;
-}
+    main
+    {
+        display: flex;
+        width: 100%;
+        gap: 35px;
+    }
 
-#CarouselContainer,
-#TimelineContainer
-{
-    display: flex;
-    flex-wrap: wrap;
-}
+    #CarouselContainer
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-
-#TimelineContainer
-{display: none;}
-
+    #TimelineContainer
+    {
+        display: none;
+    }
 }

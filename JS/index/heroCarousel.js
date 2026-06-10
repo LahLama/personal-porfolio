@@ -1,66 +1,72 @@
-let imagesCycle = [
-  {
-    id: 0,
-    link: `${BASE}ASSETS/IMAGES/games/gameJams/fishRescue.webp`,
-    name: "Fish Rescue Game Jam"
-  },
-  {
-    id: 1,
-    link: `${BASE}ASSETS/IMAGES/games/prototypes/braaiSimulator.webp`,
-    name: "Braai Simulator Prototype"
-  },
-  {
-    id: 2,
-    link: `${BASE}ASSETS/IMAGES/projects/coded/morabaraba.webp`,
-    name: "Morabaraba Project"
-  },
-  {
-    id: 3,
-    link: `${BASE}ASSETS/IMAGES/projects/practical/intergratedSystem.webp`,
-    name: "3 Way Integrated System"
-  },
-  {
-    id: 4,
-    link: `${BASE}ASSETS/IMAGES/projects/practical/keypadSystem.webp`,
-    name: "Key Pad System"
-  }
+const imagesCycle = [
+    {
+        id: 0,
+        link: `${BASE}ASSETS/IMAGES/games/gameJams/fishRescue.webp`,
+        name: "Fish Rescue Game Jam"
+    },
+    {
+        id: 1,
+        link: `${BASE}ASSETS/IMAGES/games/prototypes/braaiSimulator.webp`,
+        name: "Braai Simulator Prototype"
+    },
+    {
+        id: 2,
+        link: `${BASE}ASSETS/IMAGES/projects/coded/morabaraba.webp`,
+        name: "Morabaraba Project"
+    },
+    {
+        id: 3,
+        link: `${BASE}ASSETS/IMAGES/projects/practical/intergratedSystem.webp`,
+        name: "3 Way Integrated System"
+    },
+    {
+        id: 4,
+        link: `${BASE}ASSETS/IMAGES/projects/practical/keypadSystem.webp`,
+        name: "Key Pad System"
+    }
 ];
 
-heroImage = document.querySelector("#heroImageBack");
-
+const heroImageBack = document.querySelector("#heroImageBack");
+const heroImageFront = document.querySelector("#heroImage");
 
 let cycleIndex = 0;
 let cycleInterval;
 
-function setHeroImage(index) {
+function setHeroImage(index)
+{
+    const image = imagesCycle[index].link;
 
-    const next = document.querySelector("#heroImage");
-    next.style.backgroundImage = `url(${imagesCycle[index].link})`;
-    next.style.opacity = "1";
+    heroImageFront.style.backgroundImage = `url("${image}")`;
+    heroImageFront.style.opacity = "1";
 
-    setTimeout(() => {
-        heroImage.style.backgroundImage = `url(${imagesCycle[index].link})`;
-        next.style.opacity = "0";
+    setTimeout(() =>
+    {
+        heroImageBack.style.backgroundImage = `url("${image}")`;
+        heroImageFront.style.opacity = "0";
     }, 3000);
 }
 
-
-function nextImage() {
+function nextImage()
+{
     cycleIndex = (cycleIndex + 1) % imagesCycle.length;
     setHeroImage(cycleIndex);
 }
 
-function prevImage() {
+function prevImage()
+{
     cycleIndex = (cycleIndex - 1 + imagesCycle.length) % imagesCycle.length;
     setHeroImage(cycleIndex);
 }
 
-function startCycle(intervalMs = 5000) {
+function startCycle(intervalMs = 5000)
+{
     cycleInterval = setInterval(nextImage, intervalMs);
 }
 
-function stopCycle() {
+function stopCycle()
+{
     clearInterval(cycleInterval);
+    cycleInterval = null;
 }
 
 setHeroImage(cycleIndex);

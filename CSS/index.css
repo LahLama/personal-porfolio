@@ -1,189 +1,222 @@
-
-
-#heroContainer {
+#heroContainer
+{
     position: relative;
     height: 512px;
 }
 
-#heroImageBack, #heroImage {
+#heroImageBack,
+#heroImage
+{
     position: absolute;
     inset: 0;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#heroImage {
+#heroImage
+{
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
 
 /* About Me */
-#aboutMeImg {
-    height: 250px;
+#aboutMeImg
+{
     width: 250px;
+    height: 250px;
+
     border-radius: 50%;
+
     object-fit: cover;
     object-position: top;
 }
 
-#AboutMe_SkillsContainer {
+#AboutMe_SkillsContainer
+{
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
 /* Skills */
-#skillsContainer {
+#skillsContainer
+{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.skill {
+.skill
+{
     display: flex;
     gap: 15px;
 }
 
-.skillCircle {
-    height: 25px;
-    width: 25px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    border: var(--default) 1px solid;
+.skillCircle,
+.skillCircleDeactivate
+{
     display: inline-block;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid var(--default);
+    border-radius: 50%;
 }
 
-.skillCircleDeactivate {
-    height: 25px;
-    width: 25px;
+.skillCircle
+{
+    background-color: var(--accent);
+}
+
+.skillCircleDeactivate
+{
     background-color: var(--secondary);
-    border-radius: 50%;
-    border: var(--default) 1px solid;
-    display: inline-block;
 }
 
 /* Testimonials */
-#testimonialCard {
-    background: var(--secondaryTrans);
+#testimonialCard
+{
     display: flex;
-    padding: 25px;
+
     max-width: 500px;
-    border-radius: 12px;
+    padding: 25px;
+
     justify-self: center;
 
+    border-radius: 12px;
+    background: var(--secondaryTrans);
 }
 
-.testimonialInfo {
+.testimonialInfo
+{
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 4px;
-    flex: 1;
 }
 
-#TestimonailAndButtons {
+#TestimonailAndButtons
+{
     display: grid;
-    justify-content: space-evenly;
-    align-items: center;
     grid-template-columns: auto minmax(0, 1fr) auto;
+
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-#person-img {
+#person-img
+{
     width: 100px;
     height: 100px;
+
+    margin-right: 50px;
+
     border-radius: 50%;
     z-index: 1;
-    margin-right: 50px;
 }
 
 /* FAQ */
-#FAQandImage {
-        display: grid;
+#FAQandImage
+{
+    display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-.faq_header {
+.faq_header
+{
     display: flex;
     align-items: center;
     gap: 15px;
-    border-bottom: 2px solid var(--mainTwo);
-    cursor: pointer;
-    transition: background 0.15s;
+
     padding: 12px;
-}
 
-.faq_header h2 {
-    margin: 0;
-    
-}
+    cursor: pointer;
 
-.faq_answer {
-    margin-top: 15px;
-    width: 100%;
     border-bottom: 2px solid var(--mainTwo);
-     padding-bottom: 12px;
+    transition: background 0.15s;
 }
 
-.button-container {
+.faq_header h2
+{
+    margin: 0;
+}
+
+.faq_answer
+{
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid var(--mainTwo);
+}
+
+.button-container
+{
     display: flex;
     justify-content: center;
 }
 
 /* Tablet + Phone */
-@media screen and (min-width: 0px) and (max-width: 768px) {   
-    .whitespaceImage {
+@media screen and (max-width: 768px)
+{
+    .whitespaceImage
+    {
         display: none;
     }
 
-    #FAQandImage {
+    #FAQandImage
+    {
         display: flex;
     }
 
-    #AboutMe_SkillsContainer {
+    #AboutMe_SkillsContainer
+    {
         grid-template-columns: 1fr;
     }
 
-    #aboutMeImg {
+    #aboutMeImg
+    {
         max-width: 100px;
         max-height: 100px;
     }
 
-    #skillsContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Tablet */
-@media screen and (min-width: 480px) and (max-width: 768px) {
-
-
-    #AboutMe_SkillsContainer {
+    #skillsContainer
+    {
         grid-template-columns: 1fr;
     }
 }
 
 /* Phone */
-@media screen and (min-width: 0px) and (max-width: 479px) {
-
-
+@media screen and (max-width: 479px)
+{
     #heroContainer
-    {display: none;}
+    {
+        display: none;
+    }
 
-    .skill {
+    .skill
+    {
         display: block;
     }
 
-     #TestimonailAndButtons {
+    #TestimonailAndButtons
+    {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
     }
 
-    #testimonialCard {
+    #testimonialCard
+    {
         order: 0;
-        flex: 0 0 100%; 
+        flex: 0 0 100%;
     }
 
-    #testimonail_backButton { order: 1; }
-    #testimonail_forwardButton { order: 1; }
+    #testimonail_backButton,
+    #testimonail_forwardButton
+    {
+        order: 1;
+    }
 }

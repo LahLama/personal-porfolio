@@ -1,71 +1,61 @@
 const socialMedia = [
-  {
-    id: 1,
-    // https://www.svgrepo.com/svg/512317/github-142
-    img: `${BASE}ASSETS/IMAGES/contact/github.svg`,
-    name: "GitHub",
-    link: "https://github.com/LahLama"
-  },
-  {
-    id: 2,
-    // https://www.svgrepo.com/svg/510045/linkedin
-    img: `${BASE}ASSETS/IMAGES/contact/linkedin.svg`,
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/james-ihlenfeldt/"
-  },
-  {
-    id: 3,
-    // https://www.svgrepo.com/svg/512399/instagram-167
-    img: `${BASE}ASSETS/IMAGES/contact/instagram.svg`,
-    name: "Instagram",
-    link: "https://www.instagram.com/isleofjames/"
-  },
-  {
-    id: 4,
-    // https://www.svgrepo.com/svg/314217/itch-io
-    img: `${BASE}ASSETS/IMAGES/contact/itch.svg`,
-    name: "Itch.io",
-    link: "https://lahlama.itch.io/"
-  },
-  {
-    id: 5,
-    // https://www.svgrepo.com/svg/513089/youtube-168
-    img: `${BASE}ASSETS/IMAGES/contact/youtube.svg`,
-    name: "YouTube",
-    link: "https://www.youtube.com/@LahLama"
-  },
-  {
-    id: 6,
-    // https://www.svgrepo.com/svg/510129/pintrest
-    img: `${BASE}ASSETS/IMAGES/contact/pintrest.svg`,
-    name: "Pinterest",
-    link: "https://za.pinterest.com/LahLama/"
-  },
-  {
-    id: 7,
-    // https://www.svgrepo.com/svg/382949/tree-holidays-winter-newyear
-    img: `${BASE}ASSETS/IMAGES/contact/linktree.svg`,
-    name: "Linktree",
-    link: "https://linktr.ee/JamesIhlenfeldt"
-  }
+    {
+        id: 1,
+        img: `${BASE}ASSETS/IMAGES/contact/github.svg`,
+        name: "GitHub",
+        link: "https://github.com/LahLama"
+    },
+    {
+        id: 2,
+        img: `${BASE}ASSETS/IMAGES/contact/linkedin.svg`,
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/james-ihlenfeldt/"
+    },
+    {
+        id: 3,
+        img: `${BASE}ASSETS/IMAGES/contact/instagram.svg`,
+        name: "Instagram",
+        link: "https://www.instagram.com/isleofjames/"
+    },
+    {
+        id: 4,
+        img: `${BASE}ASSETS/IMAGES/contact/itch.svg`,
+        name: "Itch.io",
+        link: "https://lahlama.itch.io/"
+    },
+    {
+        id: 5,
+        img: `${BASE}ASSETS/IMAGES/contact/youtube.svg`,
+        name: "YouTube",
+        link: "https://www.youtube.com/@LahLama"
+    },
+    {
+        id: 6,
+        img: `${BASE}ASSETS/IMAGES/contact/pintrest.svg`,
+        name: "Pinterest",
+        link: "https://za.pinterest.com/LahLama/"
+    },
+    {
+        id: 7,
+        img: `${BASE}ASSETS/IMAGES/contact/linktree.svg`,
+        name: "Linktree",
+        link: "https://linktr.ee/JamesIhlenfeldt"
+    }
 ];
 
-socialMedia.forEach(page => {
-    // finds the skill container
-    var linksContainer = document.querySelector("#circleLinks")
+const linksContainer = document.querySelector("#circleLinks");
 
-    // Creates new skill item div
-    var newLink = document.createElement("div");
-    newLink.classList.add("link")
+socialMedia.forEach(({ img, name, link }) =>
+{
+    const newLink = document.createElement("div");
+    newLink.classList.add("link");
 
     newLink.innerHTML = `
-        <a href=${page.link} target="_blank">
-            <img src=${page.img} class="imageIcon" alt="A link to James's ${page.name}">
-            <p class="hoverName tooltip"> ${page.name} </p>
+        <a href="${link}" target="_blank" >
+            <img src="${img}" class="imageIcon" alt="Link to ${name}">
+            <p class="hoverName tooltip">${name}</p>
         </a>
     `;
 
-    linksContainer.append(newLink);
-
-   
+    linksContainer.appendChild(newLink);
 });

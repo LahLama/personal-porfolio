@@ -1,33 +1,16 @@
+/* ========================================
+   RESET & GLOBALS
+======================================== */
 
-* {
-    padding: 0;
+*
+{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-   font-family: 'Segoe UI', sans-serif;
-  
-   color: var(--mainTwo);
+
+    font-family: "Segoe UI", sans-serif;
     font-size: 16px;
-}
-
-h1{
-    font-size: 32px;
-    letter-spacing: 2px;
-  font-family: "Suez One", serif;
-   font-weight: 100;
-}
-
-h2{
-    font-size: 24px;
-    letter-spacing: 2px;
-    font-family: "Suez One", serif;
-    font-weight: 100;
-
-}
-
-h3 {
-    letter-spacing: 2px;
-    font-family: 'Suez One', serif;
-    font-weight: 100;
+    color: var(--mainTwo);
 }
 
 html
@@ -35,251 +18,331 @@ html
     scroll-behavior: smooth;
 }
 
-
-
-:root {
-    --mainOne:       #163f9879;
-    --mainOneSolid:       #163f98;
-    --mainTwo:       #ece6f4;
-    --secondary:     #73abe2;
-    --secondaryTrans:#73abe279;
-    --accent:        #edff00;
-    --neutral:       #9732d4;
-    --default:       #19191a;
+:root
+{
+    --mainOne: #163f9879;
+    --mainOneSolid: #163f98;
+    --mainTwo: #ece6f4;
+    --secondary: #73abe2;
+    --secondaryTrans: #73abe279;
+    --accent: #edff00;
+    --neutral: #9732d4;
+    --default: #19191a;
 }
 
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1
+{
+    font-family: "Suez One", serif;
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+h2
+{
+    font-family: "Suez One", serif;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+h3
+{
+    font-family: "Suez One", serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   PAGE LAYOUT
+======================================== */
+
+/* Desktop Layout */
 header { order: 0; }
 main   { order: 1; flex: 1; }
 footer { order: 2; }
 
-
-body {
+body
+{
     display: flex;
     flex-direction: column;
-    background: var(--mainTwo);
-    margin-right: 4rem;
-    margin-left: 4rem;
-   
-    background-image:
-radial-gradient(circle at 0% 0%, var(--neutral) 20%, transparent 30%),
-radial-gradient(circle at 0% 0%, var(--mainOneSolid) 30%, transparent 40%),
-radial-gradient(circle at 0% 0%, var(--neutral) 75%, transparent 80%),
-radial-gradient(circle at 0% 0%, var(--mainOneSolid) 100%, transparent 30%);
 
+    max-width: 100%;
+
+    margin-inline: 4rem;
 
     background-color: #73abe2;
+
+    background-image:
+        radial-gradient(circle at 0% 0%, var(--neutral) 5%, transparent 10%),
+        radial-gradient(circle at 0% 0%, var(--mainOneSolid) 30%, transparent 40%),
+        radial-gradient(circle at 0% 0%, var(--neutral) 75%, transparent 80%),
+        radial-gradient(circle at 0% 0%, var(--mainOneSolid) 100%, transparent 30%);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
 }
 
-.classContainer {
+.classContainer
+{
     flex: 1 1 500px;
 
+    margin-top: 30px;
+    padding: 1rem;
+
     background: var(--mainOne);
-    box-shadow: 0 4px 10px var(--default);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: var(--accent) outset 4px;
+
+    border: 4px outset var(--accent);
     border-top: none;
     border-bottom: none;
     border-radius: 1rem;
-    padding: 1rem;
-    margin-top: 30px;
+
+    box-shadow: 0 4px 10px var(--default);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-.hidden {
+.hidden
+{
     display: none;
 }
 
-/* Button */
-.pressButton {
+/* ========================================
+   BUTTONS
+======================================== */
+
+.pressButton
+{
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--mainTwo);
-    background: var(--secondaryTrans);
+
     cursor: pointer;
     outline: none;
+
+    background: var(--secondaryTrans);
+    border: 2px solid var(--mainTwo);
+    border-radius: 50%;
+
     transition: transform 0.1s, background 0.15s;
 }
 
-.pressButton img {
+.pressButton img
+{
     width: 30px;
     height: 20px;
-    margin-left: 2px;
+
     margin-top: 4px;
+    margin-left: 2px;
 }
 
-.rotated {
-    transform: rotate(90deg);
-    transition: transform 0.3s ease;
-}
-
-.pressButton:hover {
+.pressButton:hover
+{
     background: #8ec3f8;
     transform: scale(0.95);
 }
 
-.pressButton:active {
+.pressButton:active
+{
     transform: scale(0.5);
 }
 
-.backButton img {
+.backButton img
+{
     transform: scale(-1, 1);
 }
 
-/* Whitespace image */
-.whitespaceImage {
-    /* https://www.svgrepo.com/svg/518952/retrobreaker */
-    background-image: url("../ASSETS/IMAGES/prefabs/whitespaceImage.svg");
-    background-size: contain;
-    background-position: top;
-    background-repeat: no-repeat;
+.rotated
+{
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
 }
 
-/* Header */
-header {
-    padding: 25px;
-    background: linear-gradient(180deg, #163f98 0%, #163f9885 65%, #163f9800 100%);
-    border-radius: 25px;
-    border-top-left-radius:0px ;
-    border-top-right-radius: 0px;
+/* ========================================
+   DECORATIVE ELEMENTS
+======================================== */
+
+.whitespaceImage
+{
+    background-image: url("../ASSETS/IMAGES/prefabs/whitespaceImage.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header
+{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        180deg,
+        #163f98 0%,
+        #163f9885 65%,
+        #163f9800 100%
+    );
+
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
     font-size: medium;
     font-weight: bolder;
-    position: sticky;
-    top: 0px;
-    z-index: 5;
-    
+
     overflow-x: auto;
 }
 
 .navLeft,
-.navRight {
+.navRight
+{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-
-
-header a {
+header a
+{
     text-decoration: none;
 }
 
-header a:hover {
+header a:hover
+{
     text-decoration: underline;
 }
 
-.linkRef.active .linkName {
-    
-    font-weight: 1000;
+.linkRef.active .linkName
+{
     color: var(--accent);
+    font-weight: 900;
 }
-#mainTitle p
-{font-size:x-large;
-}
-/* Footer */
-footer {
 
-        background: var(--mainOne);
-    box-shadow: 0 4px 10px var(--default);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: var(--accent) outset 4px;
+#mainTitle p
+{
+    font-size: x-large;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer
+{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    margin-top: 25px;
+    margin-bottom: 12px;
+
+    max-height: 250px;
+    padding: 1rem;
+
+    background: var(--mainOne);
+
+    border: 4px outset var(--accent);
     border-top: none;
     border-bottom: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin-top: 30px;
-
-
-    
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-    max-height: 250px;
-    margin-top: 25px;
     border-radius: 14px;
-    padding: 1rem;
-    margin-bottom: 12px;
-}
-#sitemap,
-#contact {
-    flex: 1 1 250px;
-    background-color: var(--mainOne);
-    text-decoration: underline;
-    padding: 12px;
-    border-radius: 12px;
 
+    box-shadow: 0 4px 10px var(--default);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#sitemap,
+#contact
+{
     display: flex;
+    flex: 1 1 250px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 12px;
+
+    background-color: var(--mainOne);
+
+    border-radius: 12px;
+    text-decoration: underline;
 }
-
-    .linkIconImage
-    {
-        margin-top: 4px;
-        width: 25px;
-        aspect-ratio: 1 / 1;
-        position: relative;
-  top: 5px;
-    }
-
 
 #contact
 {
     gap: 50px;
 }
 
+#sitemap a
+{
+    padding: 4px;
+    margin: 2px;
 
-
-#sitemap a{
+    font-size: 18px;
+    font-weight: bolder;
     text-decoration: none;
-    font-size: 18px;  
-    padding:4px;
+
     background: var(--secondary);
     border-radius: 12px;
-    margin:2px;
-    font-weight: bolder;
-
-   
-   
 }
 
-/* Utility */
-.center {
+.linkIconImage
+{
+    position: relative;
+    top: 5px;
+
+    width: 25px;
+    aspect-ratio: 1 / 1;
+
+    margin-top: 4px;
+}
+
+/* ========================================
+   UTILITIES
+======================================== */
+
+.center
+{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* ========================================
+   PAGE TRACKER
+======================================== */
+
 #pageTracker button
-{   cursor: alias;
+{
+    --scrollPercent: 0%;
+
     position: fixed;
-    z-index: 500;
-    bottom:75px;
     right: 3%;
+    bottom: 75px;
+    z-index: 500;
+
     width: 60px;
     aspect-ratio: 1 / 2;
+
+    cursor: alias;
+
     transform: rotate(-90deg);
-}
-#pageTracker img{
-    width: 30px;
-    aspect-ratio: 1 / 2;
-    margin-left: 2px;
-    margin-top: 4px;
-   
-}
-/* Button Scroll Animation */
-#pageTracker button{
-    --scrollPercent: 0%;
 
     background: conic-gradient(
         #0f85fa 0% var(--scrollPercent),
@@ -287,59 +350,76 @@ footer {
     );
 }
 
+#pageTracker img
+{
+    width: 30px;
 
+    aspect-ratio: 1 / 2;
 
+    margin-top: 4px;
+    margin-left: 2px;
+}
 
-/* Tablet + Phone */
-@media screen and (min-width: 0px) and (max-width: 768px) {
-    *{
+/* ========================================
+   TABLET + PHONE
+======================================== */
+
+@media screen and (max-width: 768px)
+{
+    *
+    {
         font-size: 15px;
     }
 
-    .linkRef.active{
+    header { order: 3; }
+    main   { order: 1; }
+    footer { order: 2; }
 
+    .linkRef.active
+    {
         filter: invert();
     }
 
-   body {
-        display: flex;
-        flex-direction: column;
+    body
+    {
         min-height: 100vh;
         margin: 0;
-        /* Space to allow for no clipping of the header */
-        margin-bottom: 75px; 
-        
+        margin-bottom: 75px;
     }
 
-    header {
-        position: fixed;      
-        bottom: 0px;
-        top: unset;          
-        left: 0;
+    header
+    {
+        position: fixed;
         right: 0;
-        background-color: var(--mainOne);
+        bottom: 0;
+        left: 0;
+        top: unset;
+
         display: flex;
         justify-content: space-around;
-   
-        z-index: 5;
-        overflow-x: auto;    /* allow scrolling if still too wide */
         flex-wrap: nowrap;
+
         padding: 12px;
+
+        background-color: var(--mainOne);
+
         border-radius: 12px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+        overflow-x: auto;
     }
 
-    main {order: 1;}
-    header { order: 3; }
-    footer { order: 2; }
 
-    header a {
-        border-left: var(--accent) dashed 0.1rem;
-        border-right: var(--accent) dashed 0.1rem;
+
+    header a
+    {
+        border-left: 0.1rem dashed var(--accent);
+        border-right: 0.1rem dashed var(--accent);
     }
 
-    footer {
+    footer
+    {
         display: none;
     }
 
@@ -347,65 +427,33 @@ footer {
     {
         width: 100%;
         height: 100%;
+
         min-width: 30px;
         min-height: 30px;
+
         max-width: 50%;
         max-height: 50%;
-
     }
-
-
 }
 
-/* Tablet */
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    /* main {
-        background-color: rgba(255, 111, 0, 0.362);
-    } */
+/* ========================================
+   TABLET
+======================================== */
 
-    *{
-    font-size: 15px;
-    }
-    
-    h1{
-    font-size: 28px;
-    }
-
-    h2{
-    font-size: 24px;
-    }
-
-    h3{
-    font-size: 20px;
-    }
-
-
+@media screen and (min-width: 480px) and (max-width: 768px)
+{
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
 }
 
-/* Phone */
-@media screen and (min-width: 0px) and (max-width: 479px) {
-    /* main {
-        background-color: rgba(0, 255, 17, 0.407);
-    } */
+/* ========================================
+   PHONE
+======================================== */
 
-    
-    *{
-    font-size: 15px;
-    }
-    
-    h1{
-    font-size: 20px;
-    }
-
-    h2{
-    font-size: 18px;
-    }
-
-    h3{
-    font-size: 16px;
-    }
-
-    
-
-    
+@media screen and (max-width: 479px)
+{
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
 }

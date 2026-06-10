@@ -1,56 +1,49 @@
-
 .descriptionArea
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
     align-items: center;
-
+    gap: 30px;
 }
-
 
 .gameImage
 {
-    height: 250px;
     width: 250px;
-    border-radius: 12px;
-    object-fit: cover; 
+    height: 250px;
+
+    object-fit: cover;
     object-position: top;
+
+    border-radius: 12px;
 }
 
-
-.presentCard 
+.presentCard
 {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around   ;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
-    
 }
-
 
 .infoArea
 {
-    background: var(--secondaryTrans) ;     
-    max-width: 500px;
     min-width: 180px;
-    padding: 1rem;
-    padding-top: 2%;
-    border-radius:  15px;  
-   
+    max-width: 500px;
     min-height: 250px;
 
+    padding: 1rem;
+    padding-top: 2%;
+
+    background: var(--secondaryTrans);
+    border-radius: 15px;
 }
+
 /* Tablet + Phone */
-@media screen and (min-width: 0px) and (max-width: 768px)
-
-
+@media screen and (max-width: 768px)
 {
-
     .presentCard
     {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
@@ -58,20 +51,15 @@
 
     .descriptionArea
     {
-            display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .backButton { order: 1; }
-    .forwardButton{ order: 1; }
-
-
-
-
+    .backButton,
+    .forwardButton
+    {
+        order: 1;
+    }
 }
-
-
-
-

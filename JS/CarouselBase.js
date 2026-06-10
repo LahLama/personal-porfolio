@@ -1,59 +1,66 @@
-function createCarousel(list, selectors) {
-  let currentIndex_ = 0;
+function createCarousel(list, selectors)
+{
+    const prevButton = document.querySelector(selectors.prev);
+    const nextButton = document.querySelector(selectors.next);
+    const card = document.querySelector(selectors.card);
 
-  const prevButton_ = document.querySelector(selectors.prev);
-  const nextButton_ = document.querySelector(selectors.next);
-  const card_ = document.querySelector(selectors.card);
-
-  function render(index) {
-
-    prevButton_.disabled = true;
-    nextButton_.disabled = true;
-
-    if (!prevButton_ || !nextButton_ || !card_) {
-    console.error("Carousel: missing DOM element", selectors);
-    return;
-}
-
-if (!list || list.length === 0) return;
-    const item_ = list[index];
-
-    card_.innerHTML = `
-    <img class="gameImage" src="${item_.img}" alt="Image of ${item_.gameTitle}">
-    <div class="infoArea" >
-        <h2> ${item_.gameTitle} </h2>
-        <h5> ${item_.role}</h5>
-        <p> ${item_.description}</p>
-        
-    </div>
-    `;    
-
-    if (item_.link != "")
+    if (!prevButton || !nextButton || !card)
     {
-      const newRedirect = document.createElement("a");
-      newRedirect.setAttribute("href", item_.link);
-      newRedirect.setAttribute("target", "_blank")
-      newRedirect.textContent = "View it here!"
-
-      card_.querySelector(".infoArea").append(newRedirect);
+        console.error("Carousel: missing DOM element", selectors);
+        return;
     }
 
-      prevButton_.disabled = false;
-      nextButton_.disabled = false;
+    if (!Array.isArray(list) || list.length === 0)
+    {
+        console.error("Carousel: empty or invalid list", list);
+        return;
+    }
 
-  }
+    let currentIndex = 0;
 
-  nextButton_.addEventListener("click", () => {
-    currentIndex_ = (currentIndex_ + 1) % list.length;
-    render(currentIndex_);
-  });
+    function render(index)
+    {
+        const item = list[index];
 
-  prevButton_.addEventListener("click", () => {
-    currentIndex_ = (currentIndex_ - 1 + list.length) % list.length;
-    render(currentIndex_);
-  });
+        prevButton.disabled = true;
+        nextButton.disabled = true;
 
-  render(currentIndex_);
+        card.innerHTML = `
+            <img class="gameImage" src="${item.img}" alt="Image of ${item.gameTitle}">
+            
+            <div class="infoArea">
+                <h2>${item.gameTitle}</h2>
+                <h5>${item.role ?? ""}</h5>
+                <p>${item.description}</p>
+            </div>
+        `;
 
+        if (item.link)
+        {
+            const link = document.createElement("a");
+            link.href = item.link;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "View it here!";
 
+            card.querySelector(".infoArea").appendChild(link);
+        }
+
+        prevButton.disabled = false;
+        nextButton.disabled = false;
+    }
+
+    nextButton.addEventListener("click", () =>
+    {
+        currentIndex = (currentIndex + 1) % list.length;
+        render(currentIndex);
+    });
+
+    prevButton.addEventListener("click", () =>
+    {
+        currentIndex = (currentIndex - 1 + list.length) % list.length;
+        render(currentIndex);
+    });
+
+    render(currentIndex);
 }
