@@ -1,6 +1,6 @@
-const isInHtmlFolder = window.location.pathname.includes("/HTML/");
-
-const BASE = isInHtmlFolder ? "../" : "./";
+  window.BASE = window.location.pathname.includes("/html/")
+    ? "../"
+    : "./";
 
 const pages = [
   {
