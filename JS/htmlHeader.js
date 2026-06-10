@@ -4,27 +4,27 @@ pages = [
         link: "../HTML/games.html",
         position: "left",
         // https://www.svgrepo.com/svg/447384/games
-        icon : "/ASSETS/IMAGES/prefabs/games.svg"
+        icon : "../ASSETS/IMAGES/prefabs/games.svg"
     },
     {
         name: "projects",
         link: "../HTML/projects.html",
         position: "left",
         // https://www.svgrepo.com/svg/247371/documents-document
-        icon:"/ASSETS/IMAGES/prefabs/projects.svg"
+        icon:"../ASSETS/IMAGES/prefabs/projects.svg"
     },
     {
         name: "James Ihlenfeldt",
         link: "../index.html",
         position: "main",
-        icon :"/ASSETS/IMAGES/prefabs/JI.svg"
+        icon :"../ASSETS/IMAGES/prefabs/JI.svg"
     },
     {
         name: "reviews",
         link: "../HTML/reviews.html",
         position: "right",
         // https://www.svgrepo.com/svg/455657/star-comment-rating
-        icon: "/ASSETS/IMAGES/prefabs/ratings.svg"
+        icon: "../ASSETS/IMAGES/prefabs/ratings.svg"
     },
 
     {
@@ -32,7 +32,7 @@ pages = [
         link: "../HTML/contact.html",
         position: "right",
         // https://www.svgrepo.com/svg/456668/contact-mobile
-        icon:"/ASSETS/IMAGES/prefabs/contact.svg"
+        icon:"../ASSETS/IMAGES/prefabs/contact.svg"
     },
 ]
 const header = document.querySelector("header");

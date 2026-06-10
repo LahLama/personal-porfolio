@@ -2,7 +2,7 @@
 const games = [
   {
     id: 1,
-    img: "/ASSETS/IMAGES/games/fullGames/theNun.webp",
+    img: "../../ASSETS/IMAGES/games/fullGames/theNun.webp",
     gameTitle: "The Nun",
     role: "Core Coder",
     description: "Made for Wits Digital Arts 2nd Semester Project. We  had the experience to make our first 3d game with our own hand crafted objects. The Nun follows your character as they are compelled to search for their friend that has gone missing. But to find this friend you will need to unlock a series of rooms! Do enjoy. Although this is our final project there are areas for improvement. ",
@@ -10,7 +10,7 @@ const games = [
   },
   {
     id: 2,
-    img: "/ASSETS/IMAGES/games/fullGames/evilEnigma.webp",
+    img: "../../ASSETS/IMAGES/games/fullGames/evilEnigma.webp",
     gameTitle: "Evil Engima",
     role: "Gameplay and Puzzle Developer",
     description: "This was a university project done for the first semester.   You accidentally created a sentient AI and now must try and destroy it. You WILL lose. You WILL learn. You WILL be taunted at.  But WILL you succeed?",
