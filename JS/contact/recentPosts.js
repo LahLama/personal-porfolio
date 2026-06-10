@@ -28,7 +28,7 @@ latestPosts.forEach(page => {
 
     newPost.innerHTML = `
         <h2> ${page.name} </h2>
-        <img src=${page.img} alt="${page.caption}">
+        <img src=${page.img} alt="${page.caption}" class="postImage">
         <p> ${page.caption} </p>
     `;
 
