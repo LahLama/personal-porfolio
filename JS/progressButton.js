@@ -1,12 +1,13 @@
 const progressBtnElement = document.createElement('nav');
-progressBtnElement.id = "pageTracker"
+progressBtnElement.id = "pageTracker";
+
 progressBtnElement.innerHTML = `
     <button class="pressButton">
-    <img src="/ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
-    </button>`
-    
-document.body.append(progressBtnElement);
+        <img src="${BASE}ASSETS/IMAGES/prefabs/button_60x40.webp" alt="Image of a Button Icon" />
+    </button>
+`;
 
+document.body.append(progressBtnElement);
 
 let ProgressTrackerBtn = document.querySelector("#pageTracker")
 
