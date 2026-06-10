@@ -1,20 +1,22 @@
+
+
 const codedProjects = [
   {
     id: 1,
-    img: "../../ASSETS/IMAGES/projects/coded/morabaraba.webp",
+    img: `${BASE}ASSETS/IMAGES/projects/coded/morabaraba.webp`,
     gameTitle: "Morabaraba",
     role: "Multiplayer Developer",
-    description: "Built a Digitized version of morabaraba. Includes playing against a player and against an AI. Various board types are also included.",
+    description: "Built a digitised version of Morabaraba. Includes playing against a player and against an AI. Various board types are also included.",
     link: ""
   },
   {
     id: 2,
-    img: "../../ASSETS/IMAGES/projects/coded/1024.webp",
+    img: `${BASE}ASSETS/IMAGES/projects/coded/1024.webp`,
     gameTitle: "1024 in C++",
     role: "Co-Developer",
-    description: "Developed a version of 1024 in C++ in a team of two for a Software Development Course",
+    description: "Developed a version of 1024 in C++ in a team of two for a software development course",
     link: ""
-  },
+  }
 ];
 
 //Follows prev,next, card name

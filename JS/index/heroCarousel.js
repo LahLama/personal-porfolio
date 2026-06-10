@@ -1,31 +1,30 @@
 let imagesCycle = [
-
-    {
-        id: 0,
-        link: "../../ASSETS/IMAGES/games/gameJams/fishRescue.webp",
-        name: "Fish Rescue Game Jam",
-    },
-    {
-        id: 1,
-        link: "../../ASSETS/IMAGES/games/prototypes/braaiSimulator.webp",
-        name: "Braai Simulator Prototype",
-    },
-    {
-        id: 2,
-        link: "../../ASSETS/IMAGES/projects/coded/morabaraba.webp",
-        name: "Morabaraba Project",
-    },
-    {
-        id: 3,
-        link: "../../ASSETS/IMAGES/projects/practical/intergratedSystem.webp",
-        name: "3 Way Intergrated System",
-    },
-    {
-        id: 4,
-        link: "../../ASSETS/IMAGES/projects/practical/keypadSystem.webp",
-        name: "Key Pad System",
-    },   
-]
+  {
+    id: 0,
+    link: `${BASE}ASSETS/IMAGES/games/gameJams/fishRescue.webp`,
+    name: "Fish Rescue Game Jam"
+  },
+  {
+    id: 1,
+    link: `${BASE}ASSETS/IMAGES/games/prototypes/braaiSimulator.webp`,
+    name: "Braai Simulator Prototype"
+  },
+  {
+    id: 2,
+    link: `${BASE}ASSETS/IMAGES/projects/coded/morabaraba.webp`,
+    name: "Morabaraba Project"
+  },
+  {
+    id: 3,
+    link: `${BASE}ASSETS/IMAGES/projects/practical/intergratedSystem.webp`,
+    name: "3 Way Integrated System"
+  },
+  {
+    id: 4,
+    link: `${BASE}ASSETS/IMAGES/projects/practical/keypadSystem.webp`,
+    name: "Key Pad System"
+  }
+];
 
 heroImage = document.querySelector("#heroImageBack");
 
