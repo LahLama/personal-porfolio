@@ -1,40 +1,40 @@
-pages = [
-        {
-        name : "games",
-        link: "./games.html",
-        position: "left",
-        // https://www.svgrepo.com/svg/447384/games
-        icon : "../ASSETS/IMAGES/prefabs/games.svg"
-    },
-    {
-        name: "projects",
-        link: "./projects.html",
-        position: "left",
-        // https://www.svgrepo.com/svg/247371/documents-document
-        icon:"../ASSETS/IMAGES/prefabs/projects.svg"
-    },
-    {
-        name: "James Ihlenfeldt",
-        link: "../index.html",
-        position: "main",
-        icon :"../ASSETS/IMAGES/prefabs/JI.svg"
-    },
-    {
-        name: "reviews",
-        link: "./reviews.html",
-        position: "right",
-        // https://www.svgrepo.com/svg/455657/star-comment-rating
-        icon: "../ASSETS/IMAGES/prefabs/ratings.svg"
-    },
+const isInHtmlFolder = window.location.pathname.includes("/HTML/");
 
-    {
-        name : "contact",
-        link: "./contact.html",
-        position: "right",
-        // https://www.svgrepo.com/svg/456668/contact-mobile
-        icon:"../ASSETS/IMAGES/prefabs/contact.svg"
-    },
-]
+const BASE = isInHtmlFolder ? "../" : "./";
+
+const pages = [
+  {
+    name: "games",
+    link: `${BASE}HTML/games.html`,
+    position: "left",
+    icon: `${BASE}ASSETS/IMAGES/prefabs/games.svg`
+  },
+  {
+    name: "projects",
+    link: `${BASE}HTML/projects.html`,
+    position: "left",
+    icon: `${BASE}ASSETS/IMAGES/prefabs/projects.svg`
+  },
+  {
+    name: "James Ihlenfeldt",
+    link: `${BASE}index.html`,
+    position: "main",
+    icon: `${BASE}ASSETS/IMAGES/prefabs/JI.svg`
+  },
+  {
+    name: "reviews",
+    link: `${BASE}HTML/reviews.html`,
+    position: "right",
+    icon: `${BASE}ASSETS/IMAGES/prefabs/ratings.svg`
+  },
+  {
+    name: "contact",
+    link: `${BASE}HTML/contact.html`,
+    position: "right",
+    icon: `${BASE}ASSETS/IMAGES/prefabs/contact.svg`
+  }
+];
+
 const header = document.querySelector("header");
 
 const navLeft = document.createElement("div");
