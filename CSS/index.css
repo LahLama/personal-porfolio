@@ -96,7 +96,7 @@
     gap: 4px;
 }
 
-#TestimonailAndButtons
+#TestimonialAndButtons
 {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -200,7 +200,7 @@
         display: block;
     }
 
-    #TestimonailAndButtons
+    #TestimonialAndButtons
     {
         display: flex;
         flex-wrap: wrap;
@@ -214,8 +214,8 @@
         flex: 0 0 100%;
     }
 
-    #testimonail_backButton,
-    #testimonail_forwardButton
+    #testimonial_backButton,
+    #testimonial_forwardButton
     {
         order: 1;
     }

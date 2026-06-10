@@ -24,21 +24,21 @@ const testimonials = [
 
 let testimonialIndex = 0;
 
-const prevButton = document.querySelector("#testimonail_backButton");
-const nextButton = document.querySelector("#testimonail_forwardButton");
-const card = document.querySelector("#testimonialCard");
+const prevButtonTestimonial = document.querySelector("#testimonial_backButton");
+const nextButtonTestimonial = document.querySelector("#testimonial_forwardButton");
+const cardTestimonial = document.querySelector("#testimonialCard");
 
-prevButton.addEventListener("click", prevTestimonial);
-nextButton.addEventListener("click", nextTestimonial);
+prevButtonTestimonial.addEventListener("click", prevTestimonial);
+nextButtonTestimonial.addEventListener("click", nextTestimonial);
 
 function renderTestimonial(index)
 {
     const review = testimonials[index];
 
-    card.classList.add("reviewCard");
-    card.dataset.id = review.id;
+    cardTestimonial.classList.add("reviewCard");
+    cardTestimonial.dataset.id = review.id;
 
-    card.innerHTML = `
+    cardTestimonial.innerHTML = `
         <img src="${review.img}" id="person-img" alt="${review.name}">
         <div class="testimonialInfo">
             <h2>${review.name}</h2>
@@ -50,14 +50,18 @@ function renderTestimonial(index)
 
 function nextTestimonial()
 {
+ 
+  
     testimonialIndex = (testimonialIndex + 1) % testimonials.length;
     renderTestimonial(testimonialIndex);
+
 }
 
 function prevTestimonial()
 {
     testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
     renderTestimonial(testimonialIndex);
+
 }
 
 renderTestimonial(testimonialIndex);
